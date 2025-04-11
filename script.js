@@ -10,11 +10,11 @@ async function loadQuestions() {
     const data = await res.text();
     const lines = data.trim().split('\n');
     questions = lines.map(line => {
-        const [q, a, b, c, d, e, correct, explanation] = line.split('|');
+        const [q, a, b, c, d, e, correctLetter, explanation] = line.split('|');
         return {
             question: q,
             options: [a, b, c, d, e],
-            correct: correct.trim(),
+            correctIndex: "ABCDE".indexOf(correctLetter.trim()),
             explanation: explanation
         };
     });
@@ -35,11 +35,10 @@ function showQuestion() {
         const btn = document.createElement("button");
         btn.innerText = opt;
         btn.className = "option";
-        btn.onclick = () => checkAnswer(opt, btn);
+        btn.onclick = () => checkAnswer(index, btn);
         answersDiv.appendChild(btn);
     });
 
-    // Geri sayım
     timeLeft = 20;
     document.getElementById("timer").innerText = `Kalan Süre: ${timeLeft} saniye`;
     document.getElementById("timer-bar").style.width = "100%";
@@ -53,7 +52,7 @@ function showQuestion() {
         if (timeLeft <= 0) {
             clearInterval(timer);
             disableOptions();
-            showCorrectAnswer();
+            showCorrectAnswer(q.correctIndex);
             setTimeout(() => {
                 currentQuestion++;
                 showQuestion();
@@ -62,21 +61,22 @@ function showQuestion() {
     }, 1000);
 }
 
-function checkAnswer(selected, button) {
+function checkAnswer(selectedIndex, selectedButton) {
     clearInterval(timer);
-    const correct = questions[currentQuestion].correct.trim();
+    const q = questions[currentQuestion];
+    const correctIndex = q.correctIndex;
     const options = document.querySelectorAll(".option");
 
-    options.forEach(opt => {
-        opt.disabled = true;
-        if (opt.innerText === correct) {
-            opt.classList.add("correct");
-        } else if (opt.innerText === selected) {
-            opt.classList.add("wrong");
+    options.forEach((btn, idx) => {
+        btn.disabled = true;
+        if (idx === correctIndex) {
+            btn.classList.add("correct");
+        } else if (idx === selectedIndex) {
+            btn.classList.add("wrong");
         }
     });
 
-    if (selected === correct) {
+    if (selectedIndex === correctIndex) {
         score += 10 + timeLeft * 0.5;
     } else {
         score -= 2.5;
@@ -92,10 +92,9 @@ function disableOptions() {
     document.querySelectorAll(".option").forEach(btn => btn.disabled = true);
 }
 
-function showCorrectAnswer() {
-    const correct = questions[currentQuestion].correct.trim();
-    document.querySelectorAll(".option").forEach(btn => {
-        if (btn.innerText === correct) {
+function showCorrectAnswer(correctIndex) {
+    document.querySelectorAll(".option").forEach((btn, idx) => {
+        if (idx === correctIndex) {
             btn.classList.add("correct");
         }
     });
