@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edebiyat Oyunu</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Edebiyat Oyunu</h1>
+    <div id="start-screen">
+      <p>Seviyeni seç:</p>
+      <button onclick="startGame('kolay')">Kolay (Ücretsiz)</button>
+      <button onclick="alert('Tam sürüm yakında!')">Orta</button>
+      <button onclick="alert('Tam sürüm yakında!')">Zor</button>
+    </div>
+
+    <div id="quiz-screen" class="hidden">
+      <div id="timer-bar"></div>
+      <p id="question-text"></p>
+      <div id="options"></div>
+      <p id="explanation" class="hidden"></p>
+    </div>
+
+    <div id="end-screen" class="hidden">
+      <p>Skorun: <span id="final-score">0</span></p>
+      <p>En yüksek skorlar:</p>
+      <ol id="highscores"></ol>
+      <button onclick="restartGame()">Tekrar Oyna</button>
+    </div>
+
+    <p class="note">Sadece 1. seviye (Kolay) ücretsizdir. Tam sürüm için: <button onclick="alert('Tam sürüm daha hazır değil.')">Tam Sürümü Aç</button></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

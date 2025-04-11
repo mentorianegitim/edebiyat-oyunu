@@ -1,0 +1,61 @@
+body {
+  font-family: Arial, sans-serif;
+  background: url('https://i.imgur.com/Qa6K4d7.jpg'); /* <!-- BURAYI DEĞİŞTİR --> */
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-color: rgba(255,255,255,0.9);
+  padding: 20px;
+  max-width: 500px;
+  margin: 20px auto;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+h1 {
+  text-align: center;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin: 5px 0;
+  font-size: 16px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #388e3c;
+}
+
+#timer-bar {
+  height: 10px;
+  background-color: red;
+  width: 100%;
+  margin-bottom: 10px;
+  transition: width 1s linear;
+}
+
+.hidden {
+  display: none;
+}
+
+#options button {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+.note {
+  font-size: 12px;
+  margin-top: 20px;
+  text-align: center;
+  color: #555;
+}

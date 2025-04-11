@@ -1,0 +1,11 @@
+// KOLAY
+"Servet-i Fünun topluluğunun en önemli şairi kimdir?"|Mehmet Akif Ersoy|Ziya Paşa|Tevfik Fikret|Namık Kemal|Yahya Kemal Beyatlı|C|"Doğru cevap: Tevfik Fikret"
+"Divan Edebiyatı'nda kaside en çok kimle özdeşleşmiştir?"|Fuzuli|Baki|Nefi|Şeyh Galip|Nedim|C|"Doğru cevap: Nefi"
+"Yedi Meşaleciler hangi edebi döneme aittir?"|Tanzimat|Servet-i Fünun|Milli Edebiyat|Cumhuriyet|Divan|D|"Doğru cevap: Cumhuriyet Dönemi"
+"Otlakçı ve Mendil Altında kimin eseridir?"|Sait Faik|Vüsat O. Bener|Memduh Şevket|Refik Halit|Reşat Nuri|C|"Doğru cevap: Memduh Şevket Esendal"
+"İlk yerli tiyatro eseri nedir?"|Taaşşuk-ı Talat ve Fitnat|Şair Evlenmesi|Vatan Yahut Silistre|Keziban|Karagöz|B|"Doğru cevap: Şair Evlenmesi"
+"Ahmet Mithat Efendi hangi anlayışı temsil eder?"|Sanat için sanat|Toplum için sanat|Bireysel sanat|Sürrealizm|Modernizm|B|"Doğru cevap: Toplum için sanat"
+"Cumhuriyet Dönemi'nde toplumcu gerçekçi şiirin öncüsü kimdir?"|Attila İlhan|Orhan Veli|Nazım Hikmet|Ahmet Arif|Edip Cansever|C|"Doğru cevap: Nazım Hikmet"
+"Beş Hececiler grubunda yer alan şairlerden biri değildir?"|Faruk Nafiz|Halit Fahri|Orhan Veli|Enis Behiç|Yusuf Ziya|C|"Doğru cevap: Orhan Veli"
+"Yeni Lisan makalesi kime aittir?"|Yakup Kadri|Ali Canip Yöntem|Ziya Gökalp|Ömer Seyfettin|Fuat Köprülü|D|"Doğru cevap: Ömer Seyfettin"
+"Hangisi Toplumcu Gerçekçi yazarlardan değildir?"|Orhan Kemal|Yakup Kadri|Kemal Tahir|Yaşar Kemal|Fakir Baykurt|B|"Doğru cevap: Yakup Kadri"
